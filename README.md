@@ -234,3 +234,37 @@ const myArray = [["John", 23], ["cat", 2]];
 // Only change code below this line
 const removedFromMyArray = myArray.pop()
 ```
+46. Manipulate Arrays With shift()
+```
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+const removedFromMyArray = myArray.shift()
+```
+47. Manipulate Arrays With unshift()
+```
+// Setup
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+
+// Only change code below this line
+myArray.unshift(["Paul", 35]);
+```
+48. Shopping List
+```
+const myList = [["bread", 2], ["water", 3], ["fish", 5], ["milk", 4],["eggs", 10]]
+```
+49. Write Reusable JavaScript with Functions
+```
+function reusableFunction (){
+  console.log ("Hi World");
+}
+reusableFunction()
+```
+50. Passing Values to Functions with Arguments
+```
+function functionWithArgs(x, y){
+console.log(x + y);} 
+functionWithArgs(10, 11);
+```
