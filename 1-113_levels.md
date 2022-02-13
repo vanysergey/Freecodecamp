@@ -839,4 +839,233 @@ function isLess(a, b) {
 
 isLess(10, 15);
 ```
+81. Return Early Pattern for Functions
+```
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+ if (a < 0 || b < 0) {
+   return undefined; 
+ }
+   // Only change code above this line
 
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
+```
+82. Counting Cards
+```
+let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+switch(card) {
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+    count++;
+    break;
+  case 10:
+  case "J":
+  case "Q":
+  case "K":
+  case "A":
+    count--;
+    break;
+}
+let bet = " Hold";
+ if (count > 0) {
+   bet = " Bet";
+   return (count + bet);
+ }
+ return (count + bet);
+     
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+```
+83. Build JavaScript Objects
+```
+const myDog = {
+  // Only change code below this line
+"name": "Ralf",
+"legs": 4,
+"tails": 1,
+"friends": ["children", "people", "balls"]
+
+  // Only change code above this line
+};
+```
+84. Accessing Object Properties with Dot Notation
+```
+// Setup
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+const hatValue = testObj.hat;      // Change this line
+const shirtValue = testObj.shirt;    // Change this line
+```
+85. Accessing Object Properties with Bracket Notation
+```
+// Setup
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+// Only change code below this line
+const entreeValue = testObj["an entree"];   // Change this line
+const drinkValue = testObj["the drink"];    // Change this line
+```
+86. Accessing Object Properties with Variables
+```
+// Setup
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+const playerNumber = 16;  // Change this line
+const player = testObj[playerNumber];   // Change this line
+```
+87. Updating Object Properties
+```
+// Setup
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+// Only change code below this line
+myDog.name = "Happy Coder";
+```
+88. Add New Properties to a JavaScript Object
+```
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.bark = "woof";
+```
+89. Delete Properties from a JavaScript Object
+```
+// Setup
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog["tails"];
+```
+90. Using Objects for Lookups
+```
+// Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  let lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank",
+  }
+  result = lookup[val];
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
+```
+91. Testing Objects for Properties
+```
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  }
+  else {
+    return "Not Found";
+  }
+  
+  // Only change code above this line
+}
+```
+92. Manipulating Complex Objects
+```
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": ["CD", "8T", "LP"],
+    "gold": true
+  },
+  {"artist": "Linkin Park",
+    "title": "Meteora",
+    "release_year": 2003,
+    "formats": ["CD", "8T", "LP"],
+    "gold": true
+  }
+];
+```
+93. Accessing Nested Objects
+```
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+```
+94. Accessing Nested Arrays
+```
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+```
