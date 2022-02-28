@@ -1069,3 +1069,117 @@ const myPlants = [
 
 const secondTree = myPlants[1].list[1];
 ```
+95. Record Collection
+```
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop!== 'tracks'&& value!==""){
+    records[id][prop] = value;
+  }
+  else if (prop === 'tracks'&& records[id].hasOwnProperty('tracks') === false){
+    records[id][prop] = [value];
+  }
+  else if (prop === 'tracks'&& value!==""){
+   records[id][prop].push(value);
+  return records;
+  }
+  else if (value==="") {
+    delete records[id][prop];
+  }
+  return records;
+}
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+```
+96. Iterate with JavaScript While Loops
+```
+// Setup
+const myArray = [];
+let i = 5;
+
+while (i >=0) {
+myArray.push(i);
+i--;
+}
+// Only change code below this line
+
+```
+97. Iterate with JavaScript For Loops
+```
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (let i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+```
+98. Iterate Odd Numbers With a For Loop
+```
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (let i = 1; i < 10; i+=2) {
+  myArray.push(i);
+}
+```
+99. Count Backwards With a For Loop
+```
+// Setup
+const myArray = [];
+
+// Only change code below this line
+for (let i = 9; i > 0; i -=2) {
+  myArray.push(i)
+}
+```
+100. Iterate Through an Array with a For Loop
+```
+// Setup
+const myArr = [2, 3, 4, 5, 6];
+
+// Only change code below this line
+let total = 0;
+for (let i=0; i < myArr.length; i++) {
+  total +=myArr[i];
+}
+```
+101. Nesting For Loops
+```
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+for (let i =0; i <arr.length; ++i) {
+  for (let j = 0; j < arr[i].length; ++j){
+    product= product * arr[i][j];
+  }
+}
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+```
+
+
