@@ -1181,5 +1181,168 @@ for (let i =0; i <arr.length; ++i) {
 
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 ```
+102. Iterate with JavaScript Do...While Loops
+```
+// Setup
+const myArray = [];
+let i = 10;
 
+// Only change code below this line
+do {
+  myArray.push(i);
+  i++;
+} while (i < 10);
+```
+103. Replace Loops using Recursion
+```
+function sum(arr, n) {
+  // Only change code below this line
+if (n <=0) {
+  return 0;
+} else {
+  return sum(arr, n-1) + arr[n-1];
+}
+
+  // Only change code above this line
+}
+```
+104. Profile Lookup
+```
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+for (let x=0; x < contacts.length; x++) {
+  if (contacts[x].firstName===name) {
+    if (contacts[x].hasOwnProperty(prop)) {
+      return contacts[x][prop];
+    } else {
+      return "No such property";
+    }
+  }
+} 
+return "No such contact";
+  // Only change code above this line
+}
+lookUpProfile("Akira", "likes");
+```
+105. Generate Random Fractions with JavaScript
+```
+function randomFraction() {
+
+  // Only change code below this line
+var number = Math.random();
+return number;
+
+  // Only change code above this line
+}
+```
+106. Generate Random Whole Numbers with JavaScript
+```
+function randomWholeNum() {
+
+  // Only change code below this line
+var numbers =Math.floor(Math.random() * 10)
+  return numbers;
+}
+```
+107. Generate Random Whole Numbers within a Range
+```
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  var random = Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  return random;
+  // Only change code above this line
+}
+```
+108. Use the parseInt Function
+```
+function convertToInteger(str) {
+var integer = parseInt(str);
+return integer;
+}
+
+convertToInteger("56");
+```
+109. Use the parseInt Function with a Radix
+```
+function convertToInteger(str) {
+var number = parseInt(str, 2);
+return number
+}
+
+convertToInteger("10011");
+```
+110. Use the Conditional (Ternary) Operator
+```
+function checkEqual(a, b) {
+return a==b ? 'Equal' : 'Not Equal'
+}
+
+checkEqual(1, 2);
+```
+111. Use Multiple Conditional (Ternary) Operators
+```
+function checkSign(num) {
+return (num > 0) ? "positive"
+: (num < 0) ? "negative"
+: "zero";
+}
+
+checkSign(10);
+```
+112. Use Recursion to Create a Countdown
+```
+// Only change code below this line
+function countdown(n){
+ if (n < 1) {
+   return [];
+ } else {
+   const array = countdown(n - 1);
+   array.unshift(n);
+   return array;
+ }  
+}
+
+// Only change code above this line
+```
+113. Use Recursion to Create a Range of Numbers
+```
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum < endNum) {
+    const array = rangeOfNumbers(startNum, endNum - 1);
+   array.push(endNum);
+   return array;
+  } else {
+  
+  return [startNum];
+}
+}
+```
 
